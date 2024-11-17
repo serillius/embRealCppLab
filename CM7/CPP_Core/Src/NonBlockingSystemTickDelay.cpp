@@ -7,15 +7,21 @@
 
 #include "NonBlockingSystemTickDelay.h"
 
-NonBlockingSystemTickDelay::~NonBlockingSystemTickDelay() {}
+namespace myhal {
 
-void NonBlockingSystemTickDelay::initialise(uint32_t delay) {
-	wait = delay;
-	tickstart = HAL_GetTick();
+	NonBlockingSystemTickDelay::~NonBlockingSystemTickDelay() {}
+
+	void NonBlockingSystemTickDelay::initialise(uint32_t delay) {
+		wait = delay;
+		tickstart = HAL_GetTick();
+
+	}
+
+	bool NonBlockingSystemTickDelay::checkExpiration() {
+		return (HAL_GetTick() >= tickstart + wait);
+	}
 
 }
 
-uint8_t NonBlockingSystemTickDelay::checkExpiration() {
-	return (HAL_GetTick() >= tickstart + wait);
-}
+
 

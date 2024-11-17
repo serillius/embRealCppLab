@@ -31,6 +31,7 @@
 
 # Eclipse CDT project files
 .settings/
+.project
 
 # Vagrant directory
 .vagrant/

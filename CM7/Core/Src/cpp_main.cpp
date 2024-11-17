@@ -1,55 +1,61 @@
 #include "cpp_main.h"
-#include "NonBlockingSystemTickDelay.h"
-#include "STM32H7Led.h"
 #include "main.h"
+#include "retarget.h"
+#include <iostream>
 
-enum class state_t {INIT, BLINK1HZ, BLINK3HZ};
+#include "BlinkingLed.h"
+#include "AccGyroSensor.h"
+#include "IKS01A3Motion.h"
+
+extern UART_HandleTypeDef huart3;
 
 void cpp_main(){
+	RetargetInit(&huart3);
 
-	state_t State = state_t::INIT;
+	std::cout << "\n\r\n\rStart up\n\r" << std::endl;
 
-	NonBlockingSystemTickDelay delay_LD1;
-	STM32H7Led ld1(LD1_GPIO_Port, LD1_Pin);
+	myhal::BlinkingLed ld1(LD1_GPIO_Port, LD1_Pin, 4);
+	myhal::BlinkingLed ld2(LD2_GPIO_Port, LD2_Pin, 2);
+	myhal::BlinkingLed ld3(LD3_GPIO_Port, LD3_Pin, 1);
 
-	uint8_t button_new, button_old = 0;
+	IKS01A3_Motion gyro;
+	IKS01A3_Motion acc;
+	AccGyroSensor sensor(gyro, acc);
+	myhal::NonBlockingSystemTickDelay delay;
+	sensor.initSensor();
+	sensor.setZero();
+	delay.initialise(500);
+
+	int32_t x,y,z;
 
 	while(1){
+		ld1.processBlinking();
+		ld2.processBlinking();
+		ld3.processBlinking();
 
-		button_new = HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
+		if (delay.checkExpiration()) {
+			sensor.updateValues();
 
-		switch(State) {
-			case state_t::INIT:
-				State = state_t::BLINK1HZ;
-				delay_LD1.initialise(1000);
+			gyro.getAVGValues(&x, &y, &z);
+			std::cout << "---- Gyro ----" << "\r" << std::endl;
+			std::cout << "x axis: " << x << "\r" << std::endl;
+			std::cout << "y axis: " << y << "\r" << std::endl;
+			std::cout << "z axis: " << z << "\r" << std::endl;
+			std::cout << "\n\r" << std::endl;
 
-			case state_t::BLINK1HZ:
-				if (button_new and !button_old) {
-					State = state_t::BLINK3HZ;
-					delay_LD1.initialise(333);
-				}
-				if (delay_LD1.checkExpiration()) {
-					ld1.toggleLED();
-					delay_LD1.initialise(1000);
-				}
-				break;
+			acc.getAVGValues(&x, &y, &z);
+			std::cout << "---- Accelerometer ----" << "\r" << std::endl;
+			std::cout << "x axis: " << x << "\r" << std::endl;
+			std::cout << "y axis: " << y << "\r" << std::endl;
+			std::cout << "z axis: " << z << "\r" << std::endl;
+			std::cout << "\n\r" << std::endl;
 
-			case state_t::BLINK3HZ:
-				if (button_new and !button_old) {
-					State = state_t::BLINK1HZ;
-					delay_LD1.initialise(1000);
-				}
-				if (delay_LD1.checkExpiration()) {
-					ld1.toggleLED();
-					delay_LD1.initialise(333);
-				}
-				break;
-
-			default:
-				break;
-
+			delay.initialise(500);
 		}
 
-		button_old = button_new;
+		if (HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)) {
+			sensor.setZero();
+		}
+
 	}
 }

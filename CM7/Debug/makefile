@@ -10,6 +10,8 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Drivers/STM32H7xx_HAL_Driver/subdir.mk
+-include Drivers/BSP/IKS01A3/subdir.mk
+-include Drivers/BSP/Components/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk
 -include Common/Src/subdir.mk
@@ -87,7 +89,7 @@ main-build: TSM_EmbReal_CM7.elf secondary-outputs
 
 # Tool invocations
 TSM_EmbReal_CM7.elf TSM_EmbReal_CM7.map: $(OBJS) $(USER_OBJS) /home/seraphin/Documents/Master/EmbReal/embreal_cpp/CM7/STM32H745ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-g++ -o "TSM_EmbReal_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/seraphin/Documents/Master/EmbReal/embreal_cpp/CM7/STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TSM_EmbReal_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+	arm-none-eabi-g++ -o "TSM_EmbReal_CM7.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"/home/seraphin/Documents/Master/EmbReal/embreal_cpp/CM7/STM32H745ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TSM_EmbReal_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
