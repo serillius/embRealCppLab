@@ -3,11 +3,15 @@
 #include "retarget.h"
 #include <iostream>
 
+#include "fonts.h"
+
 #include "BlinkingLed.h"
 #include "AccGyroSensor.h"
 #include "IKS01A3Motion.h"
+#include "OLEDSSD1306.h"
 
 extern UART_HandleTypeDef huart3;
+extern I2C_HandleTypeDef hi2c2;
 
 void cpp_main(){
 	RetargetInit(&huart3);
@@ -25,6 +29,8 @@ void cpp_main(){
 	sensor.initSensor();
 	sensor.setZero();
 	delay.initialise(500);
+
+	OLED_SSD1306 display(&hi2c2);
 
 	int32_t x,y,z;
 
@@ -49,6 +55,13 @@ void cpp_main(){
 			std::cout << "y axis: " << y << "\r" << std::endl;
 			std::cout << "z axis: " << z << "\r" << std::endl;
 			std::cout << "\n\r" << std::endl;
+
+			char str[20];
+			sprintf(str, "x: %ld", x);
+
+			display.GotoXY(0, 0);
+			display.Puts(str, &Font_11x18, SSD1306_COLOR_WHITE);
+			display.UpdateScreen();
 
 			delay.initialise(500);
 		}

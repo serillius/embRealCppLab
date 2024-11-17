@@ -9,6 +9,7 @@ CPP_SRCS += \
 ../CPP_Core/Src/BlinkingLed.cpp \
 ../CPP_Core/Src/IKS01A3Motion.cpp \
 ../CPP_Core/Src/NonBlockingSystemTickDelay.cpp \
+../CPP_Core/Src/OLEDSSD1306.cpp \
 ../CPP_Core/Src/STM32H7Led.cpp 
 
 OBJS += \
@@ -16,6 +17,7 @@ OBJS += \
 ./CPP_Core/Src/BlinkingLed.o \
 ./CPP_Core/Src/IKS01A3Motion.o \
 ./CPP_Core/Src/NonBlockingSystemTickDelay.o \
+./CPP_Core/Src/OLEDSSD1306.o \
 ./CPP_Core/Src/STM32H7Led.o 
 
 CPP_DEPS += \
@@ -23,6 +25,7 @@ CPP_DEPS += \
 ./CPP_Core/Src/BlinkingLed.d \
 ./CPP_Core/Src/IKS01A3Motion.d \
 ./CPP_Core/Src/NonBlockingSystemTickDelay.d \
+./CPP_Core/Src/OLEDSSD1306.d \
 ./CPP_Core/Src/STM32H7Led.d 
 
 
@@ -33,7 +36,7 @@ CPP_Core/Src/%.o CPP_Core/Src/%.su CPP_Core/Src/%.cyclo: ../CPP_Core/Src/%.cpp C
 clean: clean-CPP_Core-2f-Src
 
 clean-CPP_Core-2f-Src:
-	-$(RM) ./CPP_Core/Src/AccGyroSensor.cyclo ./CPP_Core/Src/AccGyroSensor.d ./CPP_Core/Src/AccGyroSensor.o ./CPP_Core/Src/AccGyroSensor.su ./CPP_Core/Src/BlinkingLed.cyclo ./CPP_Core/Src/BlinkingLed.d ./CPP_Core/Src/BlinkingLed.o ./CPP_Core/Src/BlinkingLed.su ./CPP_Core/Src/IKS01A3Motion.cyclo ./CPP_Core/Src/IKS01A3Motion.d ./CPP_Core/Src/IKS01A3Motion.o ./CPP_Core/Src/IKS01A3Motion.su ./CPP_Core/Src/NonBlockingSystemTickDelay.cyclo ./CPP_Core/Src/NonBlockingSystemTickDelay.d ./CPP_Core/Src/NonBlockingSystemTickDelay.o ./CPP_Core/Src/NonBlockingSystemTickDelay.su ./CPP_Core/Src/STM32H7Led.cyclo ./CPP_Core/Src/STM32H7Led.d ./CPP_Core/Src/STM32H7Led.o ./CPP_Core/Src/STM32H7Led.su
+	-$(RM) ./CPP_Core/Src/AccGyroSensor.cyclo ./CPP_Core/Src/AccGyroSensor.d ./CPP_Core/Src/AccGyroSensor.o ./CPP_Core/Src/AccGyroSensor.su ./CPP_Core/Src/BlinkingLed.cyclo ./CPP_Core/Src/BlinkingLed.d ./CPP_Core/Src/BlinkingLed.o ./CPP_Core/Src/BlinkingLed.su ./CPP_Core/Src/IKS01A3Motion.cyclo ./CPP_Core/Src/IKS01A3Motion.d ./CPP_Core/Src/IKS01A3Motion.o ./CPP_Core/Src/IKS01A3Motion.su ./CPP_Core/Src/NonBlockingSystemTickDelay.cyclo ./CPP_Core/Src/NonBlockingSystemTickDelay.d ./CPP_Core/Src/NonBlockingSystemTickDelay.o ./CPP_Core/Src/NonBlockingSystemTickDelay.su ./CPP_Core/Src/OLEDSSD1306.cyclo ./CPP_Core/Src/OLEDSSD1306.d ./CPP_Core/Src/OLEDSSD1306.o ./CPP_Core/Src/OLEDSSD1306.su ./CPP_Core/Src/STM32H7Led.cyclo ./CPP_Core/Src/STM32H7Led.d ./CPP_Core/Src/STM32H7Led.o ./CPP_Core/Src/STM32H7Led.su
 
 .PHONY: clean-CPP_Core-2f-Src
 
