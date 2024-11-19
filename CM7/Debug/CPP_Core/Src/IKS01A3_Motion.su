@@ -1,0 +1,22 @@
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/arm-none-eabi/thumb/v7e-m+dp/hard/bits/gthr-default.h:229:1:int __gthread_key_delete(__gthread_key_t)	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:14:1:IKS01A3_Motion::IKS01A3_Motion()	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:16:1:IKS01A3_Motion::~IKS01A3_Motion()	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:16:1:virtual IKS01A3_Motion::~IKS01A3_Motion()	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:18:6:void IKS01A3_Motion::enable(uint32_t, uint32_t)	24	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:22:6:void IKS01A3_Motion::getValue(uint32_t, uint32_t, int32_t*, int32_t*, int32_t*)	40	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:30:6:void IKS01A3_Motion::init(uint32_t, uint32_t)	24	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:35:6:void IKS01A3_Motion::setZero(uint32_t, uint32_t)	24	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:39:6:void IKS01A3_Motion::updateValues(uint32_t, uint32_t)	48	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:56:6:void IKS01A3_Motion::getAVGValues(int32_t*, int32_t*, int32_t*)	24	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:206:7:constexpr std::array<_Tp, _Nm>::value_type& std::array<_Tp, _Nm>::operator[](size_type) [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:193:7:constexpr std::array<_Tp, _Nm>::size_type std::array<_Tp, _Nm>::size() const [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:172:7:constexpr const std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::cbegin() const [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:177:7:constexpr const std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::cend() const [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/move.h:104:5:constexpr typename std::remove_reference<_Tp>::type&& std::move(_Tp&&) [with _Tp = long int&]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/bits/stl_numeric.h:134:5:constexpr _Tp std::accumulate(_InputIterator, _InputIterator, _Tp) [with _InputIterator = const long int*; _Tp = long int]	24	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:60:7:static constexpr _Tp& std::__array_traits<_Tp, _Nm>::_S_ref(const _Tp (&)[_Nm], std::size_t) [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:288:7:constexpr const std::array<_Tp, _Nm>::value_type* std::array<_Tp, _Nm>::data() const [with _Tp = long int; unsigned int _Nm = 10]	16	static
+/opt/st/stm32cubeide_1.16.1/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.linux64_1.0.200.202406132123/tools/arm-none-eabi/include/c++/12.3.1/array:64:7:static constexpr _Tp* std::__array_traits<_Tp, _Nm>::_S_ptr(const _Tp (&)[_Nm]) [with _Tp = long int; unsigned int _Nm = 10]	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:60:1:void __static_initialization_and_destruction_0(int, int)	16	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:60:1:cpp)	8	static
+../CPP_Core/Src/IKS01A3_Motion.cpp:60:1:cpp)	8	static

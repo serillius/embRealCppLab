@@ -1,5 +1,5 @@
 CPP_Core/Src/AccGyroSensor.o: ../CPP_Core/Src/AccGyroSensor.cpp \
- ../CPP_Core/Inc/AccGyroSensor.h ../CPP_Core/Inc/IKS01A3Motion.h \
+ ../CPP_Core/Inc/AccGyroSensor.h ../CPP_Core/Inc/IKS01A3_Motion.h \
  ../../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h \
  ../X-CUBE-MEMS1/Target/iks01a3_conf.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
@@ -48,7 +48,7 @@ CPP_Core/Src/AccGyroSensor.o: ../CPP_Core/Src/AccGyroSensor.cpp \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h
 ../CPP_Core/Inc/AccGyroSensor.h:
-../CPP_Core/Inc/IKS01A3Motion.h:
+../CPP_Core/Inc/IKS01A3_Motion.h:
 ../../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h:
 ../X-CUBE-MEMS1/Target/iks01a3_conf.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:

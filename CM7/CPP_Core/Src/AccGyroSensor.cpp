@@ -7,19 +7,22 @@
 
 #include "AccGyroSensor.h"
 
+AccGyroSensor::AccGyroSensor() {}
+
 AccGyroSensor::~AccGyroSensor() {}
 
 void AccGyroSensor::initSensor(){
-	gyro_.init(INSTANCE, FUNCTION_INIT_ACC_GYRO);
+	gyro.init(INSTANCE, FUNCTION_INIT_ACC_GYRO);
+	//acc.init(INSTANCE, FUNCTION_INIT_ACC_GYRO);
 	//acc_.init(INSTANCE, FUNCTION_ACC);
 }
 
 void AccGyroSensor::updateValues(){
-	gyro_.updateValues(INSTANCE, FUNCTION_GYRO);
-	acc_.updateValues(INSTANCE, FUNCTION_ACC);
+	gyro.updateValues(INSTANCE, FUNCTION_GYRO);
+	acc.updateValues(INSTANCE, FUNCTION_ACC);
 }
 
 void AccGyroSensor::setZero(){
-	gyro_.setZero(INSTANCE, FUNCTION_GYRO);
-	acc_.setZero(INSTANCE, FUNCTION_ACC);
+	gyro.setZero(INSTANCE, FUNCTION_GYRO);
+	acc.setZero(INSTANCE, FUNCTION_ACC);
 }

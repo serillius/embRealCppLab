@@ -13,7 +13,7 @@
 
 class OLED_SSD1306 {
 public:
-	OLED_SSD1306(I2C_HandleTypeDef *hi2c);
+	OLED_SSD1306();
 	virtual ~OLED_SSD1306();
 
 	uint8_t Init(void);

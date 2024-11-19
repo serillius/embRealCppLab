@@ -9,12 +9,22 @@
 
 namespace myhal {
 
+	STM32H7Led::STM32H7Led() {}
+
 	STM32H7Led::~STM32H7Led() {}
 
-	void STM32H7Led::toggleLED() {
-		HAL_GPIO_TogglePin(port_, pin_);
+	void STM32H7Led::init(GPIO_TypeDef* port, const uint16_t pin) {
+		port_ = port;
+		pin_ = pin;
 	}
 
+	void STM32H7Led::setLED() {
+		HAL_GPIO_WritePin(port_, pin_, GPIO_PIN_SET);
+	}
+
+	void STM32H7Led::unsetLED(){
+		HAL_GPIO_WritePin(port_, pin_, GPIO_PIN_RESET);
+	}
 }
 
 

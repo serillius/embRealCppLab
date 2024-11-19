@@ -1,3 +1,6 @@
-../CPP_Core/Src/STM32H7Led.cpp:12:2:myhal::STM32H7Led::~STM32H7Led()	1
-../CPP_Core/Src/STM32H7Led.cpp:12:2:virtual myhal::STM32H7Led::~STM32H7Led()	1
-../CPP_Core/Src/STM32H7Led.cpp:14:7:void myhal::STM32H7Led::toggleLED()	1
+../CPP_Core/Src/STM32H7Led.cpp:12:2:myhal::STM32H7Led::STM32H7Led()	1
+../CPP_Core/Src/STM32H7Led.cpp:14:2:myhal::STM32H7Led::~STM32H7Led()	1
+../CPP_Core/Src/STM32H7Led.cpp:14:2:virtual myhal::STM32H7Led::~STM32H7Led()	1
+../CPP_Core/Src/STM32H7Led.cpp:16:7:void myhal::STM32H7Led::init(GPIO_TypeDef*, uint16_t)	1
+../CPP_Core/Src/STM32H7Led.cpp:21:7:void myhal::STM32H7Led::setLED()	1
+../CPP_Core/Src/STM32H7Led.cpp:25:7:void myhal::STM32H7Led::unsetLED()	1

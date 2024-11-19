@@ -8,21 +8,21 @@
 #ifndef SRC_ACCGYROSENSOR_H_
 #define SRC_ACCGYROSENSOR_H_
 
-#include "IKS01A3Motion.h"
+#include <IKS01A3_Motion.h>
 
 class AccGyroSensor {
 public:
 
-	AccGyroSensor(IKS01A3_Motion& gyro, IKS01A3_Motion& acc): gyro_(gyro), acc_(acc) {}
+	AccGyroSensor();
 	virtual ~AccGyroSensor();
 	void initSensor();
 	void updateValues();
 	void setZero();
 
-private:
+	IKS01A3_Motion gyro;
+	IKS01A3_Motion acc;
 
-	IKS01A3_Motion& gyro_;
-	IKS01A3_Motion& acc_;
+private:
 
 	const uint32_t INSTANCE = 0;
 	const uint32_t FUNCTION_INIT_ACC_GYRO = MOTION_ACCELERO | MOTION_GYRO;
