@@ -13,11 +13,9 @@
 
 namespace myhal {
 
-	class BlinkingLed: protected NonBlockingSystemTickDelay, protected STM32H7Led {
+	class BlinkingLed: protected NonBlockingSystemTickDelay, public STM32H7Led {
 	public:
 		BlinkingLed();
-		BlinkingLed(GPIO_TypeDef* port, uint16_t pin);
-		BlinkingLed(GPIO_TypeDef* port, uint16_t pin, float frequency);
 		virtual ~BlinkingLed();
 
 		void processBlinking();

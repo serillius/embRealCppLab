@@ -14,14 +14,14 @@ namespace myhal{
 	class STM32H7Led {
 	public:
 		STM32H7Led();
-		STM32H7Led(GPIO_TypeDef* port, const uint16_t pin) : port_(port), pin_(pin) {}
 		virtual ~STM32H7Led();
 
 		void toggleLED();
+		void setPinPort(GPIO_TypeDef* port, uint16_t pin);
 
 	private:
-		GPIO_TypeDef* const port_;
-		const uint16_t pin_;
+		GPIO_TypeDef* port_;
+		uint16_t pin_;
 	};
 }
 

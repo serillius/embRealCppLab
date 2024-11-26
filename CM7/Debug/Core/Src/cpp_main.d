@@ -51,7 +51,7 @@ Core/Src/cpp_main.o: ../Core/Src/cpp_main.cpp ../Core/Inc/cpp_main.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h \
  ../CPP_Core/Inc/IKS01A3Motion.h ../CPP_Core/Inc/OLEDSSD1306.h \
- ../Core/Inc/ssd1306.h ../Core/Inc/fonts.h
+ ../Core/Inc/ssd1306.h ../Core/Inc/fonts.h ../CPP_Core/Inc/pool.h
 ../Core/Inc/cpp_main.h:
 ../Core/Inc/main.h:
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h:
@@ -113,3 +113,4 @@ Core/Src/cpp_main.o: ../Core/Src/cpp_main.cpp ../Core/Inc/cpp_main.h \
 ../CPP_Core/Inc/OLEDSSD1306.h:
 ../Core/Inc/ssd1306.h:
 ../Core/Inc/fonts.h:
+../CPP_Core/Inc/pool.h:
