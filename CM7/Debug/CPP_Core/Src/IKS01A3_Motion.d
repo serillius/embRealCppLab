@@ -47,6 +47,7 @@ CPP_Core/Src/IKS01A3_Motion.o: ../CPP_Core/Src/IKS01A3_Motion.cpp \
  ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h \
+ ../CPP_Core/Inc/util_ring_allocator_std.h ../CPP_Core/Inc/util_alignas.h \
  ../Core/Inc/retarget.h
 ../CPP_Core/Inc/IKS01A3_Motion.h:
 ../../Drivers/BSP/IKS01A3/iks01a3_motion_sensors.h:
@@ -97,4 +98,6 @@ CPP_Core/Src/IKS01A3_Motion.o: ../CPP_Core/Src/IKS01A3_Motion.cpp \
 ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h:
+../CPP_Core/Inc/util_ring_allocator_std.h:
+../CPP_Core/Inc/util_alignas.h:
 ../Core/Inc/retarget.h:

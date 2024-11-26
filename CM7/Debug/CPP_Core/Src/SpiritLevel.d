@@ -48,8 +48,9 @@ CPP_Core/Src/SpiritLevel.o: ../CPP_Core/Src/SpiritLevel.cpp \
  ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h \
+ ../CPP_Core/Inc/util_ring_allocator_std.h ../CPP_Core/Inc/util_alignas.h \
  ../CPP_Core/Inc/STM32H7Led.h ../Core/Inc/main.h ../Core/Inc/retarget.h \
- ../Core/Inc/fonts.h
+ ../CPP_Core/Inc/util_ring_allocator_std.h ../Core/Inc/fonts.h
 ../CPP_Core/Inc/SpiritLevel.h:
 ../CPP_Core/Inc/AccGyroSensor.h:
 ../CPP_Core/Inc/IKS01A3_Motion.h:
@@ -101,7 +102,10 @@ CPP_Core/Src/SpiritLevel.o: ../CPP_Core/Src/SpiritLevel.cpp \
 ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h:
+../CPP_Core/Inc/util_ring_allocator_std.h:
+../CPP_Core/Inc/util_alignas.h:
 ../CPP_Core/Inc/STM32H7Led.h:
 ../Core/Inc/main.h:
 ../Core/Inc/retarget.h:
+../CPP_Core/Inc/util_ring_allocator_std.h:
 ../Core/Inc/fonts.h:

@@ -48,6 +48,7 @@ CPP_Core/Src/SpiritLevel2D.o: ../CPP_Core/Src/SpiritLevel2D.cpp \
  ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h \
  ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h \
+ ../CPP_Core/Inc/util_ring_allocator_std.h ../CPP_Core/Inc/util_alignas.h \
  ../CPP_Core/Inc/STM32H7Led.h ../Core/Inc/main.h \
  ../CPP_Core/Inc/OLEDSSD1306.h ../Core/Inc/ssd1306.h ../Core/Inc/fonts.h
 ../CPP_Core/Inc/SpiritLevel2D.h:
@@ -102,6 +103,8 @@ CPP_Core/Src/SpiritLevel2D.o: ../CPP_Core/Src/SpiritLevel2D.cpp \
 ../../Drivers/BSP/Components/lis2dw12/lis2dw12_reg.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl.h:
 ../../Drivers/BSP/Components/lis2mdl/lis2mdl_reg.h:
+../CPP_Core/Inc/util_ring_allocator_std.h:
+../CPP_Core/Inc/util_alignas.h:
 ../CPP_Core/Inc/STM32H7Led.h:
 ../Core/Inc/main.h:
 ../CPP_Core/Inc/OLEDSSD1306.h:
